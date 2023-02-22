@@ -1,11 +1,6 @@
 ﻿Option Strict On
 Public Class Form1
 
-    Const _cdecPricePerDay As Decimal = 79D
-    Dim strNumOfDays As String
-    Dim intNumOfDays As Integer
-    Dim decTotalCost As Decimal
-
 
     Private Sub TxtNumberOfNights_TextChanged(sender As Object, e As EventArgs) Handles TxtNumberOfNights.TextChanged
 
@@ -16,6 +11,10 @@ Public Class Form1
     End Sub
 
     Private Sub BtnCost_Click(sender As Object, e As EventArgs) Handles BtnCost.Click
+        Const _cdecPricePerDay As Decimal = 79D
+        Dim strNumOfDays As String
+        Dim intNumOfDays As Integer
+        Dim decTotalCost As Decimal
         strNumOfDays = TxtNumberOfNights.Text
         intNumOfDays = Convert.ToInt32(strNumOfDays)
         decTotalCost = intNumOfDays * _cdecPricePerDay
